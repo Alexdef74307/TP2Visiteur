@@ -6,6 +6,6 @@ public class Addition extends OperateurBinaire{
 	}
 
 
-	
+
 
 }

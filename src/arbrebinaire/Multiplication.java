@@ -6,6 +6,6 @@ public class Multiplication extends OperateurBinaire{
 		super("*", ng, nd);
 	}
 
-	
+
 
 }
