@@ -13,6 +13,9 @@ public class ExpressionArithmetique {
 
 	public void afficherPostFixe() {
 		System.out.println("\n postfixe:");
+		VisiteurPostFixe visiteurPostFixe = new VisiteurPostFixe();
+		racine.accept(visiteurPostFixe);
+		System.out.println("Affichage du visiteur PostFixe : " + visiteurPostFixe.result);
 		// TODO 
 		
 	}

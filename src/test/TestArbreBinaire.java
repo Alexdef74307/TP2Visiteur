@@ -18,9 +18,9 @@ public class TestArbreBinaire {
 					new Negation(new Constante(4)));
 		ExpressionArithmetique exp = new ExpressionArithmetique(racine);
 
-		exp.afficherInFixe();
+		/*exp.afficherInFixe();
 		System.out.println("\n calcul valeur: " + exp.calculerValeur());
-		System.out.println("\n calcul hauteur: " + exp.calculerHauteur());
+		System.out.println("\n calcul hauteur: " + exp.calculerHauteur());*/
 		exp.afficherPostFixe();
 		
 		
