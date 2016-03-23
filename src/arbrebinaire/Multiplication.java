@@ -6,6 +6,8 @@ public class Multiplication extends OperateurBinaire{
 		super("*", ng, nd);
 	}
 
-
+	public Object accept(Visiteur v) {
+		return v.visitMultiplication(this);
+	}
 
 }

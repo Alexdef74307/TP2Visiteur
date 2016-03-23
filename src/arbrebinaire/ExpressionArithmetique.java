@@ -21,7 +21,10 @@ public class ExpressionArithmetique {
 	}
 
 	public int calculerValeur() {
-		// TODO 
+		System.out.println("\n calcul Valeur");
+		VisiteurPostFixe visiteurPostFixe = new VisiteurPostFixe();
+		int v = (Integer)racine.accept(visiteurPostFixe);
+		System.out.println("Affichage de la valeur de l'arbre : " + v);
 		return 0;
 	}
 

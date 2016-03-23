@@ -13,8 +13,5 @@ public abstract class OperateurBinaire  extends OperateurUnaire{
 		return opD;
 	}
 
-	@Override
-	public void accept(Visiteur v) {
-		v.visitOperateurBinaire(this);
-	}
+
 }

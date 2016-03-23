@@ -9,7 +9,7 @@ public class Constante implements Noeud{
 
 
 	@Override
-	public void accept(Visiteur v) {
-		v.visitConstante(this);
+	public Object accept(Visiteur v) {
+		return v.visitConstante(this);
 	}
 }

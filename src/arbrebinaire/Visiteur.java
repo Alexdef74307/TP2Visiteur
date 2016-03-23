@@ -6,8 +6,9 @@ package arbrebinaire;
 public interface Visiteur {
 
 
-    public abstract void visitConstante(Constante constante);
-    public abstract void visitOperateurUnaire(OperateurUnaire operateurUnaire);
-    public abstract void visitOperateurBinaire(OperateurBinaire operateurBinaire);
+    public abstract Object visitConstante(Constante constante);
+    public abstract Object visitMultiplication(Multiplication multiplication);
+    public abstract Object visitAddition(Addition addition);
+    public abstract Object visitNegation(Negation negation);
 
 }

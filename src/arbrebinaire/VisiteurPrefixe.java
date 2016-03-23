@@ -5,17 +5,33 @@ package arbrebinaire;
  */
 public class VisiteurPrefixe implements Visiteur {
     @Override
-    public void visitConstante(Constante constante) {
+    public Object visitConstante(Constante constante) {
 
+        return null;
     }
 
     @Override
-    public void visitOperateurUnaire(OperateurUnaire operateurUnaire) {
-
+    public Object visitMultiplication(Multiplication multiplication) {
+        return null;
     }
 
     @Override
-    public void visitOperateurBinaire(OperateurBinaire operateurBinaire) {
+    public Object visitAddition(Addition addition) {
+        return null;
+    }
 
+    @Override
+    public Object visitNegation(Negation negation) {
+        return null;
+    }
+
+    public Object visitOperateurUnaire(OperateurUnaire operateurUnaire) {
+
+        return null;
+    }
+
+    public Object visitOperateurBinaire(OperateurBinaire operateurBinaire) {
+
+        return null;
     }
 }

@@ -5,6 +5,9 @@ public class Addition extends OperateurBinaire{
 		super("+", ng, nd);
 	}
 
+	public Object accept(Visiteur v) {
+		return v.visitAddition(this);
+	}
 
 
 
