@@ -7,8 +7,15 @@ public interface Visiteur {
 
 
     public abstract Object visitConstante(Constante constante);
+
     public abstract Object visitMultiplication(Multiplication multiplication);
+
     public abstract Object visitAddition(Addition addition);
+
     public abstract Object visitNegation(Negation negation);
+
+    public abstract Object visitOperateurUnaire(OperateurUnaire operateurUnaire);
+
+    public abstract Object visitOperateurBinaire(OperateurBinaire operateurBinaire);
 
 }

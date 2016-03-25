@@ -40,13 +40,13 @@ public class VisiteurPostFixe implements Visiteur {
     }
 
 
-    private Object visitOperateurUnaire(OperateurUnaire operateurUnaire) {
+    public Object visitOperateurUnaire(OperateurUnaire operateurUnaire) {
         int val = (Integer)operateurUnaire.getOpG().accept(this);
         this.result += operateurUnaire.getOp();
         return val;
     }
 
-    private Object visitOperateurBinaire(OperateurBinaire operateurBinaire) {
+    public Object visitOperateurBinaire(OperateurBinaire operateurBinaire) {
         int v[] = new int[2];
         v[0] = (Integer)operateurBinaire.getOpG().accept(this);
         v[1] = (Integer)operateurBinaire.getOpD().accept(this);

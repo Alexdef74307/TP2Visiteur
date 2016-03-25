@@ -35,6 +35,11 @@ public class VisiteurInfixe implements Visiteur {
         return null;
     }
 
+    @Override
+    public Object visitOperateurBinaire(OperateurBinaire operateurBinaire) {
+        return null;
+    }
+
     /*public Object visitOperateurBinaire(OperateurBinaire operateurBinaire) {
         resultTemp = operateurBinaire.getOpG().accept(this);
 
