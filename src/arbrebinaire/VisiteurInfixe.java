@@ -5,51 +5,46 @@ package arbrebinaire;
  */
 public class VisiteurInfixe implements Visiteur {
 
-    int result;
-    int resultTemp;
+    String result;
+
 
     @Override
     public Object visitConstante(Constante constante) {
-        resultTemp += constante.getValeur();
-        return null;
+        return String.valueOf(constante.getValeur());
+
     }
 
     @Override
     public Object visitMultiplication(Multiplication multiplication) {
-        return null;
+        return visitOperateurBinaire(multiplication);
     }
 
     @Override
     public Object visitAddition(Addition addition) {
-        return null;
+        return visitOperateurBinaire(addition);
+
     }
 
     @Override
     public Object visitNegation(Negation negation) {
-        return null;
+        visitOperateurUnaire(negation);
+        return visitOperateurUnaire(negation);
+
     }
 
-       public Object visitOperateurUnaire(OperateurUnaire operateurUnaire) {
-        resultTemp = -resultTemp;
-
-        return null;
+    public Object visitOperateurUnaire(OperateurUnaire operateurUnaire) {
+        String result = operateurUnaire.getOp().toString();
+        result += String.valueOf(operateurUnaire.getOpG().accept(this));
+        return result;
     }
 
     @Override
     public Object visitOperateurBinaire(OperateurBinaire operateurBinaire) {
-        return null;
+        String result = "";
+        result += String.valueOf(operateurBinaire.getOpG().accept(this));
+        result += operateurBinaire.getOp().toString();
+        result += String.valueOf(operateurBinaire.getOpD().accept(this));
+        return result;
     }
 
-    /*public Object visitOperateurBinaire(OperateurBinaire operateurBinaire) {
-        resultTemp = operateurBinaire.getOpG().accept(this);
-
-        switch(operateurBinaire.getOp()){
-            case "+" :
-
-                break;
-            case "*" :
-                break;
-        }
-        result += resultTemp;
-    }*/
 }

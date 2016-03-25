@@ -37,6 +37,9 @@ public class ExpressionArithmetique {
 	}
 	public void afficherInFixe() {
 		System.out.println("\n infixe:");
+		VisiteurInfixe visiteurInfixe = new VisiteurInfixe();
+		String r = (String)racine.accept(visiteurInfixe);
+		System.out.println("\n Affichage du parcours infixe : " + r);
 		// TODO 
 		
 	}
